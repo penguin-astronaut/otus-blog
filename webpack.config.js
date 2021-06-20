@@ -17,7 +17,7 @@ module.exports = {
       title: "Blog",
       filename: "index.html",
     }),
-    new CopyWebpackPlugin([{ from: "src/img", to: "img" }]),
+    new CopyWebpackPlugin({ patterns: [{ from: "src/img", to: "img" }] }),
   ],
 
   devServer: {
