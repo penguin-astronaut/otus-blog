@@ -1,9 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   font-family: Arial, Helvetica, sans-serif;
   color: $fontColorDefault;
+}
+
+button {
+  border: none;
+  outline: none;
 }
 
 a {
@@ -27,51 +33,21 @@ body {
   margin: 0 auto;
 }
 
-.header {
-  background-color: $bgDarkColor;
 
-  .header__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-  }
-
-  &__title {
-    color: $fontColorLight;
-    font-size: 25px;
-  }
-
-  &__list {
-    display: flex;
-    list-style: none;
-
-    &-item {
-      margin-right: 5px;
-
-      :last-child {
-        margin-right: 0;
-      }
-    }
-  }
-}
 
 .main {
   flex-grow: 1;
   padding: 20px 0;
 }
 
-.footer {
-  margin-top: auto;
-  background-color: $bgDarkColor;
-  &__wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-  }
+.btn {
+  display: flex;
+  padding: 3px 5px;
 
-  &__text {
-    color: $fontColorLight;
-  }
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #007bff;
+  
+  color: $fontColorLight;
+  font-size: 14px;
 }

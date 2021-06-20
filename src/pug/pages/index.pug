@@ -14,7 +14,9 @@ block content
     p.welcome-latest__title Latest Posts
     .welcome-latest__items
       each val, index in posts
-        .post
+        article.post
           img.post__preview(src="../img/post_" + index + ".jpg", alt="preview")
           p.post__desc= val 
           .post__footer
+            button.btn View
+            .post__minutes 6 min
