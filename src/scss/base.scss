@@ -28,8 +28,7 @@ body {
 }
 
 .header {
-  background-color: $bgDarcColor;
-  color: $fontColorLight;
+  background-color: $bgDarkColor;
 
   .header__wrapper {
     display: flex;
@@ -39,6 +38,7 @@ body {
   }
 
   &__title {
+    color: $fontColorLight;
     font-size: 25px;
   }
 
@@ -63,12 +63,15 @@ body {
 
 .footer {
   margin-top: auto;
-  color: $fontColorLight;
-  background-color: $bgDarcColor;
+  background-color: $bgDarkColor;
   &__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
+  }
+
+  &__text {
+    color: $fontColorLight;
   }
 }

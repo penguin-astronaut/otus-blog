@@ -27,9 +27,7 @@
       font-size: 26px;
     }
     &__items {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      @include flex-between 
     }
   }
 }
