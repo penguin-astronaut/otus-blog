@@ -14,7 +14,7 @@ button {
 
 a {
   text-decoration: none;
-  
+
   &:hover {
     color: #3f51b5;
   }
@@ -33,8 +33,6 @@ body {
   margin: 0 auto;
 }
 
-
-
 .main {
   flex-grow: 1;
   padding: 20px 0;
@@ -47,7 +45,7 @@ body {
   cursor: pointer;
   border-radius: 5px;
   background-color: #007bff;
-  
+
   color: $fontColorLight;
   font-size: 14px;
 }
