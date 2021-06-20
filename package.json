@@ -6,7 +6,9 @@
   "scripts": {
     "prepare": "husky install",
     "lint": "prettier --check . && eslint .",
-    "lint:fix": "prettier --write . && eslint . --fix"
+    "lint:fix": "prettier --write . && eslint . --fix",
+    "build": "webpack --mode=production",
+    "serve": "webpack serve --mode=development"
   },
   "repository": {
     "type": "git",
@@ -25,10 +27,14 @@
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "2.3.1",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
     "sass": "^1.35.1",
     "sass-loader": "^12.1.0",
+    "style-loader": "^2.0.0",
     "webpack": "^5.39.1",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   },
   "lint-staged": {
     "*.{js,css,md,yaml,html}": "prettier --write"
