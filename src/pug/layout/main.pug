@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block title
+      title Default title
+  body
+    header.header
+      .container
+        .header__wrapper
+          a.header__title(href="/")  My blog
+          nav.header__nav
+            ul.header__list
+              li.header__list-item
+                a.header__list-link(href="index.html") Home 
+              li.header__list-item
+                a.header__list-link(href="posts.html") Posts
+              li.header__list-item
+                a.header__list-link(href="photos.html") Photos
+              li.header__list-item
+                a.header__list-link(href="contacts.html") Contacts
+    
+    main.main
+      .container
+        block content
+
+    footer.footer 
+      .container
+        .footer__wrapper 
+          p.footer__text Some footer text @ 2021
