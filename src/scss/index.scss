@@ -1,0 +1,36 @@
+.welcome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &__avatar {
+    width: 300px;
+    height: 300px;
+    margin-right: 15px;
+
+    border-radius: 50%;
+
+    background: center/cover no-repeat url('../img/avatar.jpg') ;
+  }
+
+  &__desc {
+    flex-basis: 60%;
+  }
+
+  &-latest {
+    &__title {
+      margin-bottom: 15px;
+      
+      font-weight: 500;
+      text-align: center;
+      font-size: 26px;
+    }
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}
+

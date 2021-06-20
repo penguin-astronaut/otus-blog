@@ -3,6 +3,7 @@
   padding: 0;
 
   font-family: Arial, Helvetica, sans-serif;
+  color: $fontColorDefault;
 }
 
 a {
@@ -28,7 +29,7 @@ body {
 
 .header {
   background-color: $bgDarcColor;
-  color: #ffffff;
+  color: $fontColorLight;
 
   .header__wrapper {
     display: flex;
@@ -62,9 +63,12 @@ body {
 
 .footer {
   margin-top: auto;
-  color: #ffffff;
+  color: $fontColorLight;
   background-color: $bgDarcColor;
   &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 60px;
   }
 }
