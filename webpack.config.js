@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -16,6 +17,7 @@ module.exports = {
       title: "Blog",
       filename: "index.html",
     }),
+    new CopyWebpackPlugin([{ from: "src/img", to: "img" }]),
   ],
 
   devServer: {
