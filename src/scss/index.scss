@@ -26,8 +26,5 @@
       text-align: center;
       font-size: 26px;
     }
-    &__items {
-      @include flex-between;
-    }
   }
 }

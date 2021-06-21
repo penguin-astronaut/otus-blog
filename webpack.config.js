@@ -1,6 +1,11 @@
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const pages = fs
+  .readdirSync(`${__dirname}/src/pug/pages`)
+  .filter((fileName) => fileName.endsWith('.pug'));
 
 module.exports = {
   entry: './src/index.js',
@@ -12,11 +17,12 @@ module.exports = {
   },
 
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/pug/pages/index.pug'),
-      title: 'Blog',
-      filename: 'index.html',
-    }),
+    ...pages.map(
+      (page) => new HtmlWebpackPlugin({
+        template: `${__dirname}/src/pug/pages/${page}`,
+        filename: `./${page.replace(/\.pug/, '.html')}`,
+      }),
+    ),
     new CopyWebpackPlugin({ patterns: [{ from: 'src/img', to: 'img' }] }),
   ],
 

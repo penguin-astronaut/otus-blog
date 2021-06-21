@@ -1,0 +1,7 @@
+mixin post(post)
+  article.post-card
+    img.post-card__preview(src='../img/' + post.img, alt="preview")
+    p.post-card__desc= post.desc
+    .post-card__footer
+      a.btn(href="/post.html") View
+      .post-card__minutes= post.min + ' min'

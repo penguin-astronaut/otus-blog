@@ -8,15 +8,16 @@ block content
     .welcome__avatar
     p.welcome__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione odit eaque dolorum, ut facilis reiciendis accusantium eum aliquid, ipsam minima, quas totam a doloremque voluptatum illo repellat id earum maxime.
 
-  - var posts = ['Text for post 1', 'TExt for post 2 with lorem. Lorem ipsum dolor sit amet consectetur adipisicing elit', 'Last text'];
+  -
+    var posts = [
+      {desc: 'Lorem ipsum dolor sit amet consectetur', img: 'post_0.jpg', min: '12'},
+      {desc: 'Ratione odit eaque dolorum, ut facilis reiciendis accusantium eum aliquid, ipsam minima, quas totam a doloremque voluptatum illo repellat id earum maxime.', img: 'post_1.jpg', min: '8'},
+      {desc: 'Custom desc for third card', img: 'post_2.jpg', min: '22'},
+    ]
 
   .welcome-latest
     p.welcome-latest__title Latest Posts
-    .welcome-latest__items
-      each val, index in posts
-        article.post
-          img.post__preview(src='../img/post_' + index + '.jpg', alt="preview")
-          p.post__desc= val
-          .post__footer
-            button.btn View
-            .post__minutes 6 min
+    .posts
+      include ../mixins/post
+      each post in posts
+        +post(post)
