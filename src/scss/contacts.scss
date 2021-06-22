@@ -1,0 +1,28 @@
+.contacts {
+  display: flex;
+  height: 500px;
+
+  &__img {
+    width: 50%;
+    background: center/cover no-repeat url("../img/contacts.jpg");
+  }
+
+  &__form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__input,
+  &__message {
+    margin-bottom: 10px;
+    width: 90%;
+    padding: 6px;
+  }
+
+  &__button {
+    width: 100px;
+  }
+}
