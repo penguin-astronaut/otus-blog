@@ -81,3 +81,9 @@
     display: inline-block;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .posts {
+    justify-content: space-around;
+  }
+}
