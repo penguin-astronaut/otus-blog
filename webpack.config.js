@@ -1,7 +1,6 @@
 const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const pages = fs
   .readdirSync(`${__dirname}/src/pug/pages`)
@@ -23,7 +22,6 @@ module.exports = {
         filename: `./${page.replace(/\.pug/, '.html')}`,
       }),
     ),
-    new CopyWebpackPlugin({ patterns: [{ from: 'src/img', to: 'img' }] }),
   ],
 
   devServer: {
@@ -49,7 +47,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         loader: 'file-loader',
         options: {
-          name: '[path][name].[ext]',
+          name: '/img/[name].[ext]',
         },
       },
     ],

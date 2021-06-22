@@ -23,7 +23,6 @@
   "homepage": "https://github.com/penguin-astronaut/otus-blog#readme",
   "devDependencies": {
     "@prettier/plugin-pug": "^1.15.3",
-    "copy-webpack-plugin": "^9.0.0",
     "css-loader": "^5.2.6",
     "eslint": "^7.29.0",
     "eslint-config-airbnb-base": "^14.2.1",

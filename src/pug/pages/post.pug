@@ -7,7 +7,10 @@ block content
   .post__wrapper 
     .post__content
       h1.post__title Hello Post!
-      img.post__preview(src="../img/post_single.jpg", alt="post preview")
+      img.post__preview(
+        src=require('../../img/post_single.jpg').defult,
+        alt="post preview"
+      )
       p.post__text
         | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue nisi id risus varius, eu iaculis orci porta. Quisque sit amet tellus ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent ac ante sit amet velit pellentesque cursus vitae ut diam. Sed eget aliquet arcu. Suspendisse scelerisque pretium venenatis. Nunc sit amet lobortis diam, iaculis scelerisque elit. Maecenas diam metus, elementum eu turpis sit amet, vehicula vestibulum velit. Fusce volutpat egestas tempus. Praesent vel purus non ex lacinia condimentum. Cras felis ligula, tristique at convallis et, posuere ac orci.
       p.post__text 
