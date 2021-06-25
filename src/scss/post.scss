@@ -6,6 +6,7 @@
   &__wrapper {
     @include flex-between;
   }
+
   &__content {
     width: 700px;
   }
@@ -34,7 +35,6 @@
   flex-direction: column;
   width: 320px;
   margin-bottom: 25px;
-
   border-radius: 7px;
   overflow: hidden;
   box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
@@ -48,7 +48,6 @@
   &__desc {
     flex-grow: 1;
     padding: 10px;
-
     font-size: 13px;
   }
 
@@ -64,7 +63,6 @@
     padding: 0 10px;
     margin-top: auto;
     height: 50px;
-
     border-top: 1px solid rgba(0, 0, 0, 0.125);
   }
 }
