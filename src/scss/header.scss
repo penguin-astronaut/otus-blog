@@ -1,0 +1,28 @@
+.header {
+  background-color: $bgDarkColor;
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+
+  &__title {
+    color: $fontColorLight;
+    font-size: 25px;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+
+    &-item {
+      margin-right: 5px;
+
+      :last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

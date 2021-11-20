@@ -1,0 +1,23 @@
+extends ../layout/main
+
+block title
+  title Home page
+
+block content
+  .welcome
+    .welcome__avatar
+    p.welcome__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione odit eaque dolorum, ut facilis reiciendis accusantium eum aliquid, ipsam minima, quas totam a doloremque voluptatum illo repellat id earum maxime.
+
+  -
+    var posts = [
+      {desc: 'Lorem ipsum dolor sit amet consectetur', img: 'post_0.jpg', min: '12'},
+      {desc: 'Ratione odit eaque dolorum, ut facilis reiciendis accusantium eum aliquid, ipsam minima, quas totam a doloremque voluptatum illo repellat id earum maxime.', img: 'post_1.jpg', min: '8'},
+      {desc: 'Custom desc for third card', img: 'post_2.jpg', min: '22'},
+    ]
+
+  .welcome-latest
+    p.welcome-latest__title Latest Posts
+    .posts
+      include ../mixins/post
+      each post in posts
+        +post(post)

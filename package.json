@@ -1,0 +1,53 @@
+{
+  "name": "otus-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "prettier --check . && eslint . && stylelint stylelint **/*.{css,scss}",
+    "lint:fix": "prettier --write . && eslint . --fix && stylelint **/*.{css,scss} --fix",
+    "build": "webpack --mode=production",
+    "serve": "webpack serve --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penguin-astronaut/otus-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/penguin-astronaut/otus-blog/issues"
+  },
+  "homepage": "https://github.com/penguin-astronaut/otus-blog#readme",
+  "devDependencies": {
+    "@prettier/plugin-pug": "^1.15.3",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^2.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.19.0",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{css,scss}": "stylelint --fix",
+    "*.{js,css,md,yaml,html,scss,pug}": "prettier --write"
+  }
+}

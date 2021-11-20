@@ -1,0 +1,14 @@
+extends ../layout/main
+
+block title
+  title Contact with me
+
+block content
+  h1.title Contacts
+  .contacts
+    .contacts__img
+    form.contacts__form 
+      input.contacts__input(type="text", placeholder="Name")
+      input.contacts__input(type="email", placeholder="Email")
+      textarea.contacts__message(name="", cols="30", rows="10")
+      button.btn.contacts__button Send
